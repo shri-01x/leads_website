@@ -1,13 +1,13 @@
 // Site-wide settings. Change these in one place.
 
-export const BOOKING_URL = 'https://calendly.com/pays-demo/social-media-meeting';
+export const BOOKING_URL = 'https://calendly.com/pays-demo/leadszz-meeting?utm_source=Website&utm_medium=direct-A&utm_campaign=Website';
 
 export const CONTACT = {
-  phoneLabel: '(833) 400-PAYS',
+  phoneLabel: '(833) 400-7297',
   phoneHref: 'tel:+18334007297',
   whatsappLabel: '(305) 735-9857',
   whatsappHref: 'https://wa.me/13057359857',
-  email: 'support@payspos.com',
+  email: 'support@leadszz.com',
 };
 
 export const OFFICES = [
