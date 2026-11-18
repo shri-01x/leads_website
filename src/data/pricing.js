@@ -1,5 +1,6 @@
 // Pricing per service. All prices are per month.
-// meter = how full the volume bar is (0–100). The last plan in each list is highlighted.
+// meter = how full the volume bar is (0–100). note = optional small line under the bar.
+// features can be set per service (shared by all plans) or per plan (plan.features wins). The last plan in each list is highlighted.
 
 export const PRICING_TABS = [
   { key: 'email', label: 'Email', icon: 'mail' },
@@ -14,34 +15,49 @@ export const PRICING = {
     badge: 'Best value',
     features: ['Email copy written for you', 'Campaign setup & sending', 'Monthly report'],
     plans: [
-      { name: 'Starter', price: 99, volume: '50,000', unit: 'emails / month', meter: 5, note: '≈ $1.98 per 1,000 emails' },
-      { name: 'Growth', price: 299, volume: '250,000', unit: 'emails / month', meter: 25, note: '≈ $1.20 per 1,000 emails' },
-      { name: 'Pro', price: 499, volume: '500,000', unit: 'emails / month', meter: 50, note: '≈ $1.00 per 1,000 emails' },
-      { name: 'Scale', price: 899, volume: '1 million', unit: 'emails / month', meter: 100, note: '≈ $0.90 per 1,000 emails' },
+      { name: 'Starter', price: 99, volume: '50,000', unit: 'emails / month', meter: 5 },
+      { name: 'Growth', price: 299, volume: '250,000', unit: 'emails / month', meter: 25 },
+      { name: 'Pro', price: 499, volume: '500,000', unit: 'emails / month', meter: 50 },
+      { name: 'Scale', price: 899, volume: '1 million', unit: 'emails / month', meter: 100 },
     ],
   },
   sms: {
-    badge: 'Best value',
-    features: ['SMS copy written for you', 'Campaigns & automations', 'Opt-in list management', 'Monthly report'],
+    badge: 'Save 10%',
     plans: [
-      { name: 'Starter', price: 499, volume: '50,000', unit: 'SMS / month', meter: 33, note: '≈ 1.0¢ per SMS' },
-      { name: 'Growth', price: 999, volume: '150,000', unit: 'SMS / month', meter: 100, note: '≈ 0.67¢ per SMS' },
+      {
+        name: 'Starter', price: 499, volume: '49,900', unit: 'SMS messages / month', meter: 50, note: '1.00¢ per SMS',
+        features: ['SMS copy written for you','Campaigns & automations','Opt-in list management','Monthly report'],
+      },
+      {
+        name: 'Growth', price: 899, volume: '100,000', unit: 'SMS messages / month', meter: 100, note: '0.899¢ per SMS',
+        features: ['Everything in Starter','Advanced SMS automations','Audience segmentation','Priority campaign support'],
+      },
     ],
   },
   blog: {
-    badge: 'Most output',
-    features: ['SEO keyword research', 'Written for your brand', 'Published on your site'],
+    badge: 'Best value',
     plans: [
-      { name: 'Starter', price: 99, volume: '60', unit: 'blog articles / month', meter: 40, note: '2 articles every day' },
-      { name: 'Growth', price: 299, volume: '150', unit: 'blog articles / month', meter: 100, note: '5 articles every day' },
+      {
+        name: 'Starter', price: 99, volume: '50', unit: 'SEO blog articles / month', meter: 36, note: '$1.98 per article',
+        features: ['SEO keyword research','AI-written for your brand','Automatic website publishing','SEO titles & meta descriptions','1 connected website','Content scheduling','Monthly performance report'],
+      },
+      {
+        name: 'Growth', price: 199, volume: '140', unit: 'SEO blog articles / month', meter: 100, note: '$1.42 per article',
+        features: ['Everything in Starter','Advanced SEO keyword research','Up to 3 connected websites','Automatic internal linking','Content calendar & scheduling','Priority publishing queue','Monthly performance report','Priority email support'],
+      },
     ],
   },
   li: {
-    badge: 'Most output',
-    features: ['Written in your voice', 'Content calendar', 'Posted for you'],
+    badge: 'Best value',
     plans: [
-      { name: 'Starter', price: 99, volume: '60', unit: 'LinkedIn posts / month', meter: 40, note: '2 posts every day' },
-      { name: 'Growth', price: 299, volume: '150', unit: 'LinkedIn posts / month', meter: 100, note: '5 posts every day' },
+      {
+        name: 'Starter', price: 99, volume: '20', unit: 'LinkedIn posts / month', meter: 33, note: '5 posts per week',
+        features: ['AI-written in your brand voice','Personalized content calendar','Industry-specific content','Post scheduling & publishing','1 LinkedIn account','Monthly performance report'],
+      },
+      {
+        name: 'Growth', price: 299, volume: '60', unit: 'LinkedIn posts / month', meter: 100, note: 'Up to 2 posts daily',
+        features: ['Everything in Starter','Advanced content strategy','Up to 3 LinkedIn accounts','Thought leadership content','Post scheduling & publishing','Performance analytics','Priority support'],
+      },
     ],
   },
   soc: {

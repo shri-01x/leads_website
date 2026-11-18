@@ -288,7 +288,7 @@ svg.ic{fill:none;stroke:currentColor;stroke-width:6;stroke-linecap:round;stroke-
 
 /* ---------- Pricing ---------- */
 .pr-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(36px,4vw,56px)}
-.seg{display:flex;gap:6px;padding:6px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--ink-line);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none;margin-bottom:24px}
+.seg{display:flex;gap:6px;padding:6px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--ink-line);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none;margin:0 auto 24px}
 .seg::-webkit-scrollbar{display:none}
 .seg button{display:inline-flex;align-items:center;gap:9px;height:48px;padding:0 18px;border-radius:10px;font-weight:600;font-size:15px;color:var(--ink-soft);white-space:nowrap;transition:.25s;flex:none}
 .seg button:hover{color:var(--ink)}
@@ -296,7 +296,7 @@ svg.ic{fill:none;stroke:currentColor;stroke-width:6;stroke-linecap:round;stroke-
 .seg button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
 .seg button[aria-selected="true"] svg{color:var(--lime)}
 .plans{display:grid;gap:16px;grid-template-columns:repeat(4,minmax(0,1fr))}
-.plans.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:880px}
+.plans.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:880px;margin-inline:auto}
 .plan{border-radius:24px;box-shadow:inset 0 0 0 1.5px var(--ink);padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;gap:18px;animation:fade .5s var(--ease) both}
 .plan:nth-child(2){animation-delay:.05s}.plan:nth-child(3){animation-delay:.1s}.plan:nth-child(4){animation-delay:.15s}
 .plan.hi{background:var(--ink);color:var(--paper);box-shadow:0 0 0 2px var(--lime)}
@@ -321,7 +321,7 @@ svg.ic{fill:none;stroke:currentColor;stroke-width:6;stroke-linecap:round;stroke-
 .plan li::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--lime);box-shadow:0 0 0 1px var(--ink);flex:none}
 .plan.hi li::before{box-shadow:none}
 .plan .btn{margin-top:auto;height:54px}
-.pr-note{margin:32px 0 0;color:var(--ink-soft);font-size:16px}
+.pr-note{text-align:center;margin:32px 0 0;color:var(--ink-soft);font-size:16px}
 .pr-note a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px}
 @media (max-width:1100px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:620px){.plans,.plans.two{grid-template-columns:1fr}}

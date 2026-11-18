@@ -63,9 +63,9 @@ export default function Pricing() {
                   <b>{p.volume}</b>
                   <span>{p.unit}</span>
                   <div className="meter"><i style={{ width: `${p.meter}%` }} /></div>
-                  <span className="unit">{p.note}</span>
+                  {p.note && <span className="unit">{p.note}</span>}
                 </div>
-                <ul>{data.features.map((f) => <li key={f}>{f}</li>)}</ul>
+                <ul>{(p.features || data.features).map((f) => <li key={f}>{f}</li>)}</ul>
                 <a className={`btn ${hi ? 'btn-lime' : 'btn-ink'}`} href={BOOKING_URL} target="_blank" rel="noopener">Get started <b>→</b></a>
               </article>
             );
